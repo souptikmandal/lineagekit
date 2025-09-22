@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lineagekit"
+version = "0.1.0"
+description = "Data lineage & impact analyzer for Python pipelines"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+dependencies = [
+  "pandas>=2.0",
+  "typer>=0.9",
+  "rich>=13.0",
+  "networkx>=3.0",
+  "streamlit>=1.36",
+  "matplotlib>=3.7",
+  "scikit-learn>=1.2"
+]
+
+[project.scripts]
+lineagekit = "lineagekit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lineagekit*"]
+
+[tool.setuptools.package-data]
+"lineagekit.ui" = ["streamlit_app.py"]

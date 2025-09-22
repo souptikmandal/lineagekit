@@ -1,0 +1,2 @@
+[console_scripts]
+lineagekit = lineagekit.cli:main

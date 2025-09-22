@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+*.pyc
+lineage.db
+*.json
+.DS_Store
+
